@@ -60,6 +60,12 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 WS.verifyResponseStatusCode(response, 200)
 assertThat(response.getStatusCode()).isEqualTo(200)
 
+def body = response.getResponseText()
+def jsonSlurper = new JsonSlurper()
+def jsonResponse = jsonSlurper.parseText(body)
+String bookingid = jsonResponse.bookingid
+GlobalVariable.bookingid = bookingid
+
 WS.verifyElementPropertyValue(response, 'booking.firstname', &quot;Boris&quot;)
 WS.verifyElementPropertyValue(response, 'booking.lastname', &quot;Johnson&quot;)
 WS.verifyElementPropertyValue(response, 'booking.totalprice', 150000)

@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'token=dfd1429fc970aee'</initValue>
-      <name>token</name>
+      <initValue>'447'</initValue>
+      <name>bookingid</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

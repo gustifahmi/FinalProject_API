@@ -34,9 +34,9 @@
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>Cookie</name>
+      <name>Authorization</name>
       <type>Main</type>
-      <value>${token}</value>
+      <value>Basic YWRtaW46cGFzc3dvcmQxMjM=</value>
       <webElementGuid>1f645e33-4e66-453d-8ea4-c0d87d76cbed</webElementGuid>
    </httpHeaderProperties>
    <katalonVersion>8.3.5</katalonVersion>
@@ -52,13 +52,6 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>0</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
-   <variables>
-      <defaultValue>GlobalVariable.token</defaultValue>
-      <description></description>
-      <id>97c0218d-8190-4b70-9ade-0db28cf8f931</id>
-      <masked>false</masked>
-      <name>token</name>
-   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
@@ -69,16 +62,6 @@ import com.kms.katalon.core.webservice.verification.WSResponseManager
 
 import groovy.json.JsonSlurper
 import internal.GlobalVariable as GlobalVariable
-//
-//def requestToken = findTestObject('Object Repository/Auth/Create Token')
-//def responseToken = WS.sendRequest(requestToken)
-//def body = responseToken.getResponseText()
-//
-//def jsonSlurper = new JsonSlurper()
-//def jsonResponse = jsonSlurper.parseText(body)
-//String token = &quot;token=&quot; + jsonResponse.token
-//GlobalVariable.token = token
-//println(GlobalVariable.token)
 
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()

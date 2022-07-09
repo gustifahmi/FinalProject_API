@@ -38,17 +38,6 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
 WS.verifyResponseStatusCode(response, 200)
-assertThat(response.getStatusCode()).isEqualTo(200)
-
-WS.verifyElementPropertyValue(response, '[0].bookingid', 229)
-WS.verifyElementPropertyValue(response, '[1].bookingid', 264)
-WS.verifyElementPropertyValue(response, '[2].bookingid', 25)
-WS.verifyElementPropertyValue(response, '[3].bookingid', 262)
-WS.verifyElementPropertyValue(response, '[4].bookingid', 129)
-WS.verifyElementPropertyValue(response, '[5].bookingid', 304)
-WS.verifyElementPropertyValue(response, '[6].bookingid', 184)
-WS.verifyElementPropertyValue(response, '[7].bookingid', 351)
-WS.verifyElementPropertyValue(response, '[8].bookingid', 136)
-WS.verifyElementPropertyValue(response, '[9].bookingid', 256)</verificationScript>
+assertThat(response.getStatusCode()).isEqualTo(200)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

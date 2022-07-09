@@ -23,7 +23,7 @@
    <maxResponseSize>0</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>https://restful-booker.herokuapp.com/booking/229</restUrl>
+   <restUrl>https://restful-booker.herokuapp.com/booking/137</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -45,12 +45,12 @@ import internal.GlobalVariable as GlobalVariable
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
-WS.verifyElementPropertyValue(response, 'firstname', &quot;Michael&quot;)
-WS.verifyElementPropertyValue(response, 'lastname', &quot;%date:~4,2%%date:~7,2%%date:~10,4%_%time:~0,2%%time:~3,2%%time:~6,2%&quot;)
-WS.verifyElementPropertyValue(response, 'totalprice', 111)
-WS.verifyElementPropertyValue(response, 'depositpaid', true)
-WS.verifyElementPropertyValue(response, 'bookingdates.checkin', &quot;2019-05-16&quot;)
-WS.verifyElementPropertyValue(response, 'bookingdates.checkout', &quot;2019-05-16&quot;)
-WS.verifyElementPropertyValue(response, 'additionalneeds', &quot;Breakfast&quot;)</verificationScript>
+WS.verifyElementPropertyValue(response, 'firstname', &quot;Sytse&quot;)
+WS.verifyElementPropertyValue(response, 'lastname', &quot;Veening&quot;)
+WS.verifyElementPropertyValue(response, 'totalprice', 387)
+WS.verifyElementPropertyValue(response, 'depositpaid', false)
+WS.verifyElementPropertyValue(response, 'bookingdates.checkin', &quot;2022-07-09&quot;)
+WS.verifyElementPropertyValue(response, 'bookingdates.checkout', &quot;2022-07-14&quot;)
+WS.verifyElementPropertyValue(response, 'additionalneeds', &quot;Newspaper&quot;)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

@@ -20,17 +20,13 @@ import org.openqa.selenium.Keys as Keys
 
 response = WS.sendRequest(findTestObject('Booking/Get Booking'))
 
-WS.verifyElementPropertyValue(response, 'firstname', 'Michael')
+WS.verifyResponseStatusCode(response, 200)
+assertThat(response.getStatusCode()).isEqualTo(200)
 
-WS.verifyElementPropertyValue(response, 'lastname', '%date:~4,2%%date:~7,2%%date:~10,4%_%time:~0,2%%time:~3,2%%time:~6,2%')
-
-WS.verifyElementPropertyValue(response, 'totalprice', 111)
-
-WS.verifyElementPropertyValue(response, 'depositpaid', true)
-
-WS.verifyElementPropertyValue(response, 'bookingdates.checkin', '2019-05-16')
-
-WS.verifyElementPropertyValue(response, 'bookingdates.checkout', '2019-05-16')
-
-WS.verifyElementPropertyValue(response, 'additionalneeds', 'Breakfast')
-
+WS.verifyElementPropertyValue(response, 'firstname', "Sytse")
+WS.verifyElementPropertyValue(response, 'lastname', "Veening")
+WS.verifyElementPropertyValue(response, 'totalprice', 387)
+WS.verifyElementPropertyValue(response, 'depositpaid', false)
+WS.verifyElementPropertyValue(response, 'bookingdates.checkin', "2022-07-09")
+WS.verifyElementPropertyValue(response, 'bookingdates.checkout', "2022-07-14")
+WS.verifyElementPropertyValue(response, 'additionalneeds', "Newspaper")

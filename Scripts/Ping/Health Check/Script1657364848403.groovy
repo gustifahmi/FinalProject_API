@@ -18,7 +18,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-response = WS.sendRequest(findTestObject('Booking/Delete Booking', [('bookingid') : GlobalVariable.bookingid]))
+response = WS.sendRequest(findTestObject('Ping/Health Check'))
 
 WS.verifyResponseStatusCode(response, 201)
+
 assertThat(response.getStatusCode()).isEqualTo(201)
+

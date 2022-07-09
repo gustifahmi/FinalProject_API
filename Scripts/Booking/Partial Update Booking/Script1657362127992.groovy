@@ -18,7 +18,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-response = WS.sendRequest(findTestObject('Booking/Partial Update Booking', [('token') : GlobalVariable.token]))
+response = WS.sendRequest(findTestObject('Booking/Partial Update Booking'))
 
 WS.verifyResponseStatusCode(response, 200)
 

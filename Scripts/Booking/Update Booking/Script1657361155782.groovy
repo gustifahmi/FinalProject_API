@@ -18,15 +18,23 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-response = WS.sendRequest(findTestObject('Booking/Update Booking', [('token') : GlobalVariable.token]))
+response = WS.sendRequest(findTestObject('Booking/Update Booking'))
 
 WS.verifyResponseStatusCode(response, 200)
+
 assertThat(response.getStatusCode()).isEqualTo(200)
 
-WS.verifyElementPropertyValue(response, 'firstname', "John")
-WS.verifyElementPropertyValue(response, 'lastname', "Cena")
+WS.verifyElementPropertyValue(response, 'firstname', 'John')
+
+WS.verifyElementPropertyValue(response, 'lastname', 'Cena')
+
 WS.verifyElementPropertyValue(response, 'totalprice', 150000)
+
 WS.verifyElementPropertyValue(response, 'depositpaid', true)
-WS.verifyElementPropertyValue(response, 'bookingdates.checkin', "2022-07-09")
-WS.verifyElementPropertyValue(response, 'bookingdates.checkout', "2022-07-10")
-WS.verifyElementPropertyValue(response, 'additionalneeds', "Snacks")
+
+WS.verifyElementPropertyValue(response, 'bookingdates.checkin', '2022-07-09')
+
+WS.verifyElementPropertyValue(response, 'bookingdates.checkout', '2022-07-10')
+
+WS.verifyElementPropertyValue(response, 'additionalneeds', 'Snacks')
+
